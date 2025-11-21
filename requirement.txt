@@ -1,0 +1,7 @@
+SOAPnuke (v2.1.9)
+GangSTR (v2.5.0)
+ExpansionHunter (v5.0.0)
+dumpSTR (6.1.0)
+EnsembleTR (1.0.0)
+python (v3.12.8)
+bcftools (v1.21)
