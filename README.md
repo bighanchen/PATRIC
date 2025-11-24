@@ -17,8 +17,7 @@ TR_Genotyping.sh -name Sample_Name -sex Sample_Sex
 
 3. TR Allele Frequency Filtering
 
-#Based on the TR allele frequency data from TR-Atlas, execute the following program to perform TR allele frequency fitering.
-#Regarding the acquisition of TR allele frequency data, please reach out to the authors of the TR-Atlas.
+#Based on the TR allele frequency data from TR-Atlas, execute the following program to perform TR allele frequency fitering.#Regarding the acquisition of TR allele frequency data, please reach out to the authors of the TR-Atlas.
 
 python TR_AF_Filtering.py --file1 TR_AlleleFreq.txt --file2 Sample_Name_ensembletr.vcf --output Sample_Name_ensembletr_AF.vcf
 bcftools view Sample_Name_ensembletr_AF.vcf -Oz -o Sample_Name_ensembletr_AF.vcf.gz
