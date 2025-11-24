@@ -1,4 +1,0 @@
-hg38_TR_Atlas.bed
-hg38_segdup.sorted.bed.gz
-variant_catalog.json
-TRAD_anno.txt
