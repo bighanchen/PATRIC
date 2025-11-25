@@ -4,15 +4,17 @@ Candidate pathogenic TRs identification pipeline
 1.Data Preprocessing
 
 #Using SOAPnuke as an example, execute the following program to preprocess the data.
- 
-```Data_Preprocessing.sh -name Sample_Name```
+```python 
+Data_Preprocessing.sh -name Sample_Name
+```
 
 
 2.TR Genotyping
 
 #GangSTR and ExpansionHunter were applied to genotype TRs in parallel. After conducting independent quality control on the outputs from each tool, the results were integrated using ensembleTR. Execute the following program to perform TR genotyping.
-
-```TR_Genotyping.sh -name Sample_Name -sex Sample_Sex```
+```python
+TR_Genotyping.sh -name Sample_Name -sex Sample_Sex
+```
 
 
 3.TR Allele Frequency Filtering
@@ -31,8 +33,10 @@ bcftools index -t Sample_Name_ensembletr_AF.vcf.gz
 
 #Merge VCF files of samples in the same pedigree into one VCF file, remove lines with GT="./."
 
-```bcftools merge -o Pedigree_No_orig.vcf.gz Sample_Name1_ensembletr_AF.vcf.gz Sample_Name2_ensembletr_AF.vcf.gz```
-```bcftools view -i 'COUNT(GT="./.") == 0' Pedigree_No_orig.vcf.gz -o Pedigree_No.vcf.gz```
+```python
+bcftools merge -o Pedigree_No_orig.vcf.gz Sample_Name1_ensembletr_AF.vcf.gz Sample_Name2_ensembletr_AF.vcf.gz
+bcftools view -i 'COUNT(GT="./.") == 0' Pedigree_No_orig.vcf.gz -o Pedigree_No.vcf.gz
+```
 
 
 #Find TRs that have been annotated in TRAD, TRAD_anno.txt was obtained from TRAD database (http://trad.zryhyy.com.cn/)
