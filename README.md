@@ -1,21 +1,21 @@
 # PATRIC
 Candidate pathogenic TRs identification pipeline
 
-1. Data Preprocessing
+1.Data Preprocessing
 
 #Using SOAPnuke as an example, execute the following program to preprocess the data.
  
 ```Data_Preprocessing.sh -name Sample_Name```
 
 
-2. TR Genotyping
+2.TR Genotyping
 
 #GangSTR and ExpansionHunter were applied to genotype TRs in parallel. After conducting independent quality control on the outputs from each tool, the results were integrated using ensembleTR. Execute the following program to perform TR genotyping.
 
 ```TR_Genotyping.sh -name Sample_Name -sex Sample_Sex```
 
 
-3. TR Allele Frequency Filtering
+3.TR Allele Frequency Filtering
 
 #Based on the TR allele frequency data from TR-Atlas, execute the following program to perform TR allele frequency fitering.
 
@@ -27,7 +27,7 @@ bcftools view Sample_Name_ensembletr_AF.vcf -Oz -o Sample_Name_ensembletr_AF.vcf
 bcftools index -t Sample_Name_ensembletr_AF.vcf.gz
 ```
 
-4. TR Functional Annotation
+4.TR Functional Annotation
 
 #Merge VCF files of samples in the same pedigree into one VCF file, remove lines with GT="./."
 
