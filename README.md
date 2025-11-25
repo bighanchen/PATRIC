@@ -1,18 +1,17 @@
-# PATRIC
-Candidate pathogenic TRs identification pipeline
+## PATRIC: candidate pathogenic TRs identification pipeline
 
-1.Data Preprocessing
+## 1.Data Preprocessing
 
-#Using SOAPnuke as an example, execute the following program to preprocess the data.
-```python 
+Using SOAPnuke as an example, execute the following program to preprocess the data.
+```bash 
 Data_Preprocessing.sh -name Sample_Name
 ```
 
 
-2.TR Genotyping
+## 2.TR Genotyping
 
-#GangSTR and ExpansionHunter were applied to genotype TRs in parallel. After conducting independent quality control on the outputs from each tool, the results were integrated using ensembleTR. Execute the following program to perform TR genotyping.
-```python
+GangSTR and ExpansionHunter were applied to genotype TRs in parallel. After conducting independent quality control on the outputs from each tool, the results were integrated using ensembleTR. Execute the following program to perform TR genotyping.
+```bash
 TR_Genotyping.sh -name Sample_Name -sex Sample_Sex
 ```
 
