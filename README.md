@@ -5,7 +5,7 @@ Candidate pathogenic TRs identification pipeline
 
 #Using SOAPnuke as an example, execute the following program to preprocess the data.
  
-Data_Preprocessing.sh -name Sample_Name
+```Data_Preprocessing.sh -name Sample_Name```
 
 
 2. TR Genotyping
