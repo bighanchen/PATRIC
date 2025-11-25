@@ -1,4 +1,4 @@
-## PATRIC: candidate pathogenic TRs identification pipeline
+# PATRIC: candidate pathogenic TRs identification pipeline
 
 ## 1.Data Preprocessing
 
