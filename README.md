@@ -1,5 +1,5 @@
 # PATRIC: candidate pathogenic TRs identification pipeline
-[Uploading PATRIC.tif…]()
+![PATRIC](./PATRIC.tif)
 
 ## 1.Data Preprocessing
 
